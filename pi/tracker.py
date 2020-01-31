@@ -5,6 +5,8 @@ from pixy import *
 
 class Tracker:
 
+    dataFormat = "{}:{};{}:{};{}:{};{}:{};"
+
     blocks = BlockArray(100)
     
     def __init__(self):
@@ -16,7 +18,8 @@ class Tracker:
         print("Changed program to CCC")
         data = pixy.ccc_get_blocks(100, self.blocks)
         print("Data gathered")
-        return data
+        #Find the target with largest area to return
+        return dataFormat.format()
 
     def trackColor(self, _x, _y):
         pixy.change_prog("video")
